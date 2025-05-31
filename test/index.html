@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Network ID</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Four Network ID</h1>
+
+    <?php
+    // Check if the form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Collect the value of the input field
+        $networkID = htmlspecialchars($_POST['networkID']);
+        
+        // Save the data to a file
+        $file = 'data.txt';  // File where data will be saved
+        file_put_contents($file, $networkID . PHP_EOL, FILE_APPEND | LOCK_EX);
+        
+        // Display a success message
+        echo "<p>Network ID saved! <a href='index.html'>Go back</a></p>";
+    } else {
+        // Show form if it's not a POST request
+        echo '<form action="" method="post">
+                <label for="networkID">Enter Network ID:</label>
+                <input type="text" id="networkID" name="networkID" required>
+                <input type="submit" value="Submit">
+              </form>';
+    }
+    ?>
+
+    <footer>
+        <p>© TheFour - a Minecraft server</p>
+        <p>Contact Email: araffaamf@gmail.com</p>
+        <p>Discord: @antophd</p>
+        <p>Follow us on TikTok: 
+            <a href="https://www.tiktok.com/@arAffaMaulanaFai">arAffaMaulanaFai</a>, 
+            <a href="https://www.tiktok.com/@thefour_official">thefour_official</a>
+        </p>
+    </footer>
+</body>
+</html>
