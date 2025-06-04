@@ -9,8 +9,95 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background-color: black;
+      }
+      header {
+          color: dimgrey;
+          height: 60px;
+          width: auto;
+      }
+      .header-text {
+        text-align: left;
+        
+      }
+      .header {
+        background-color: gray;
+        height: 467px;
+        width: auto;
+      }
+      .align {
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        text-wrap: flex;
+        position: absolute;
+        align-items: center;
+        transform: translate(-50%, -50%);
+      }
+      .p {
+        top: 46%;
+        left: 50%;
+      }
+      b {
+        color: white;
+      }
+      .navbar-brand {
+        background-image: image("icon.png");
+      }
+      .nav-item {
+        text-align: left;
+        margin: 0;
+        padding: 9px;
+      }
+      .nav-item:hover {
+        background-color: gray;
+        padding: 9px;
+      }
+      .header-img {
+        width: 40px;
+        height: 40px;
+      }
+      .navbar-nav {
+        background-color: black;
+        width: auto;
+      }
+      .badan {
+        height: 1000px;
+        width: 100%;
+      }
+      .button {
+        color: white;
+      }
+    </style>
 </head>
 <body>
-    
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+          <img src="icon.png" class="header-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="https://worldnetwork.four.my.id" class="button nav-item">
+                <b>Home</b>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://worldnetwork.four.my.id/Docs" class="button nav-item">
+                <b>Docs</b>
+              </a>
+            </li class="nav-item">
+              <a href="#" class="button nav-item"><b>Download</b></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 </body>
 </html>
